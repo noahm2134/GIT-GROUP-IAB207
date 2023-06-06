@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-7">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="underline" style="margin-bottom: 2%; margin-top: 1%;">Title: SOFTBALL CLUB GC: kids series event!</h2>
+                        </div>
+                        <div class="col-sm-12 col-md-6" style="margin-bottom: 3%;">
+                            <div class="boxDetails">
+                                <h4>City: Brisbane</h4>
+                            </div>
+                            <div class="boxDetails">
+                                <h4>Address: 5 mayfield st, ascot</h4>
+                            </div>
+                            <div class="boxDetails">
+                                <h4>Status: Open</h4>
+                            </div>
+                            <div class="boxDetails">
+                                <h4>Category: Play</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6" style="margin-bottom: 3%;">
+                            <div class="boxDetails">
+                                <h4>Time: 9:00am</h4>
+                            </div>
+                            <div class="boxDetails">
+                                <h4>Duration: 4 Hours</h4>
+                            </div>
+                            <div class="boxDetails">
+                                <h4>Start-date: 19/06/2023</h4>
+                            </div>
+                            <div class="boxDetails">
+                                <h4>End-date: 20/06/2023</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-5">
+                    <div class="d-flex flex-column d-grid justify-content-center">
+                        <img class="eventImg" src="img/KidsSoftball.jpg" alt="">
+                        <a href="#" class="btn btn-outline-warning fw-bold" style="width: 95%;margin: 1%;"><h3>Book Now</h3></a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column">
+                <h2>Summary:</h2>
+                <p class="summary">
+                    This year bring your kids down to watch and play with the great leading kids softball team, filling up quick! don't miss out. <br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis facilisis lacus sit amet tristique. Nullam bibendum urna tortor, pretium maximus sapien finibus in. Nam in metus fringilla, blandit eros id, volutpat metus. Cras euismod fringilla turpis, non vulputate metus commodo sed. Cras sed sapien a lectus vehicula fringilla. Maecenas consequat imperdiet tincidunt. Vestibulum aliquam erat at eros rutrum bibendum. Fusce aliquam turpis vitae dolor rutrum, a dignissim tortor consequat. Sed tristique nunc et maximus consectetur. Suspendisse sagittis vulputate nisi, sed convallis quam.
+                    Morbi facilisis nec massa in imperdiet. Donec sit amet lectus ligula. Donec facilisis metus leo, ut elementum arcu egestas at. Integer faucibus bibendum ultrices. Proin dui elit, finibus a ornare vitae, egestas a odio. Ut ut ipsum sit amet metus condimentum malesuada non tincidunt risus. Fusce mattis porttitor mi, vel vehicula arcu bibendum in. Aliquam finibus leo enim, eu posuere mi laoreet ac.
+                    Sed ac tincidunt est. Nulla vitae tristique nisi, vitae elementum nulla. Maecenas et eros id erat ullamcorper eleifend. Morbi varius fringilla neque, eu varius neque. Curabitur cursus dictum tellus, eu accumsan dolor interdum in. Sed ac tortor fermentum, vestibulum ligula a, pellentesque tortor. Vivamus a facilisis justo, nec fringilla felis. Sed in mauris pellentesque, laoreet tortor nec, porta massa.
+                    Quisque pharetra mollis nulla, sed pretium tellus. Sed interdum nisi vitae mauris tempus mattis. Duis egestas convallis turpis, at pretium dolor. Aliquam bibendum fringilla dui, nec hendrerit velit egestas at. Ut fringilla mi et nisl pharetra aliquet. Morbi rutrum felis est, non euismod erat commodo ut. Curabitur ut ullamcorper massa. Donec eget mauris mauris. Pellentesque sollicitudin placerat sollicitudin. Duis vulputate aliquet velit, nec dictum lacus congue in.
+                    Vestibulum dapibus porta neque. Proin consectetur tempor aliquam. Etiam et ante nec leo gravida efficitur. Cras dignissim ligula turpis, a sodales nisl ornare a. Etiam a pharetra nibh. Sed dictum diam sit amet neque tempor dictum. Fusce euismod convallis quam eget pharetra. Maecenas tempor lectus ligula, ut tincidunt lacus elementum nec. 
+                </p>
+            </div>
+        </div>
+        <!--This is the comment section-->
+        <div class="container" id="commentSection">
+            <form>
+                <div class="form-group">
+                    <label for="CommentSection"><h5 class="text-left">Comment section:</h5></label>
+                    <textarea type="text" class="comment-form" id="commentSection" style="height: 100%; width: 100%;" placeholder="Enter summary here"></textarea>
+                </div> 
+            </form>
+            <div class="comments flex-column d-flex">
+                <ul>
+                    <li class="list-unstyled mx-0 flex-column align-items-start"><p style="font-weight: bold;">Date posted: 14/05/2023 3:58pm</p></li>
+                    <li class="list-unstyled mx-0 flex-column align-items-start"><p class="userComment">Max well: hey is this event gonna be good for my two little girls?</p></li>
+                    <li class="list-unstyled mx-0 flex-column align-items-start"><p style="font-weight: bold;">Date posted: 13/05/2023 1:13pm</p></li>
+                    <li class="list-unstyled mx-0 flex-column align-items-start"><p class="userComment">Kasie marie: This was fantastic for my kid!</p></li>
+                </ul>
+            </div>
+        </div>
+{% endblock %} 

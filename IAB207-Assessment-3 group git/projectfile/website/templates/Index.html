@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+  <div class="container" id="homebody1">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="d-flex categoryicon">
+                        <button type="button" class="btn btn-outline-warning btn-md btn-block" onclick="filterCategory('Watch')">
+                            <img src="../static/img/watching.png" alt="watchicon" id="categoryicon1">
+                            <span>WATCH</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="categoryicon">
+                        <button type="button" class="btn btn-outline-warning btn-md btn-block" onclick="filterCategory('Play')">
+                            <img src="../static/img/play.png" alt="playicon" id="categoryicon2">
+                            <span>PLAY</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="categoryicon" >
+                        <button type="button" class="btn btn-outline-warning btn-md btn-block" onclick="filterCategory('Learn')">
+                            <img src="../static/img/learning.png" alt="learnicon" id="categoryicon3">
+                            <span>LEARN</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container m=2">
+            <div class="row">
+                <!--event 1 kids softball event league-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Brisbane">
+                        <a href="Eventdetails.html"><img src="../static/img/KidsSoftball.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">SOFTBALL CLUB GC: kids series event!</h5>
+                            <p class="card-text">Category: Play</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Brisbane</p>
+                            <p class="card-text">Date and time: 19/06/2023 9:00am</p>
+                            <p class="card-text">Discription: This year bring your kids down to watch and play with the great leading kids softball team, filling up quick! don't miss out. </p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event 2 kids learning music-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Brisbane">
+                        <a href="Eventdetails.html"><img src="../static/img/KidsMusicLearning.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Free music lessons for children under the age of 15</h5>
+                            <p class="card-text">Category: Learn</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Brisbane</p>
+                            <p class="card-text">Date and time: 14/05/2023 2:00pm</p>
+                            <p class="card-text">Discription: In Aspley we are offering free music listens, this includes singing, guitar, violin and drums. bring the kids down and lets get rocking and rolling!</p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event 3 outdoor car cinema-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Gold Coast">
+                        <a href="Eventdetails.html"><img src="../static/img/CarCinema.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Spongbob movie night with the kids!</h5>
+                            <p class="card-text">Category: Watch</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Gold Coast</p>
+                            <p class="card-text">Date and time: 12/05/2023 11:00am</p>
+                            <p class="card-text">Discription: Dutton park, outside bay cinema presents spongbob freaken squarepants</p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event 4 indoor play center-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Gold Coast">
+                        <a href="Eventdetails.html"><img src="../static/img/IndoorPlay.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Epic kids play center SYDNEY</h5>
+                            <p class="card-text">Category: Play</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Gold Coast</p>
+                            <p class="card-text">Date and time: 21/05/2023 9:00am</p>
+                            <p class="card-text">Discription: Sydney kids area, fun for the grown ups too. arcade room and Sausage SIZZLE included in the purchase of a ticket</p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event 5 early learning-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Hobart">
+                        <a href="Eventdetails.html"><img src="../static/img/earlylearning.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Early learning facility; lets see how your kid is doing!</h5>
+                            <p class="card-text">Category: Learn</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Hobart</p>
+                            <p class="card-text">Date and time: 20/05/2023 10:00am</p>
+                            <p class="card-text">Discription: come down to our facility and have a day of checking how your child is currently fairing academically for their relative age</p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event 6 arcade-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Hobart">
+                        <a href="Eventdetails.html"><img src="../static/img/arcade.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Free arcade day for the kids!</h5>
+                            <p class="card-text">Category: Play</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Hobart</p>
+                            <p class="card-text">Date and time: 21/07/2023 1:00pm</p>
+                            <p class="card-text">Discription: A sponsor has come along to help out the gatton community and is providing the communties</p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event 7 kids comedy play-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Melbourne">
+                        <a href="Eventdetails.html"><img src="../static/img/kidscomedy.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">CoolKid comedian center afternoon show premiere</h5>
+                            <p class="card-text">Category: Watch</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Melbourne</p>
+                            <p class="card-text">Date and time: 01/06/2023 3:00pm</p>
+                            <p class="card-text">Discription: Come down to our premiere of CoolKid comedian center, lets laugh along side the next generation of pranksters in kings melbourne</p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event 8 fun math-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Melbourne">
+                        <a href="Eventdetails.html"><img src="../static/img/kidsmath.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Math is actually fun? geelong event center</h5>
+                            <p class="card-text">Category: Learn</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Melbourne</p>
+                            <p class="card-text">Date and time: 28/05/2023 12:00am</p>
+                            <p class="card-text">Discription: Math? is it ever fun? yes it is, lets show you how its done! come down lets educate the kids and find what fits.</p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event 9 tennis-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Sydney">
+                        <a href="Eventdetails.html"><img src="../static/img/kidstennis.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tennis club; childs day</h5>
+                            <p class="card-text">Category: Play</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Sydney</p>
+                            <p class="card-text">Date and time: 04/06/2023 7:30am</p>
+                            <p class="card-text">Description: Tennis day for the children, mini tournament. come down and lets see the young ones compete!</p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event 10 culinary kids school-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Sydney">
+                        <a href="Eventdetails.html"><img src="../static/img/kidsculinary.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Epic kids play center SYDNEY</h5>
+                            <p class="card-text">Category: Learn</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Sydney</p>
+                            <p class="card-text">Date and time: 09/06/2023 10:00am</p>
+                            <p class="card-text">Discription: Ever wanted to teach your children safe and good cooking methods? its not too early for us, cooking is a skill that can be honed forever, why not start now? logan holm centre</p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event 11 self defence kids karate-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Sydney">
+                        <a href="Eventdetails.html"><img src="../static/img/kidskarate.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kick & punch karrrate!</h5>
+                            <p class="card-text">Category: Learn</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Sydney</p>
+                            <p class="card-text">Date and time: 27/05/2023 5:00pm</p>
+                            <p class="card-text">Description: The best defense is offense! the same goes for the mind. training your kids especially at a young age is a true and bonnide way to teach early behavoural methods of disipline, world karate leaders will be present within this event, come down and check out the oppurtunity!</p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event 12 play airsoft-->
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center align-items-stretch d-flex">
+                    <div class="card m-2" data-city="Sydney">
+                        <a href="Eventdetails.html"><img src="../static/img/kidsairsoft.jpg" class="card-img-top"  alt="event listed"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Caboulture air soft field</h5>
+                            <p class="card-text">Category: Play</p>
+                            <p class="card-text">Status: OPEN</p>
+                            <p class="card-text">City: Sydney</p>
+                            <p class="card-text">Date and time: 09/06/2023 3:00pm</p>
+                            <p class="card-text">Discription: every week matches just for the kids! check out our rules on our website www.airsoftkiddies.com/notreallink</p>
+                            <div class="d-grid mt-auto gap-3">
+                                <a href="Eventdetails.html" class="btn btn-outline-warning fw-bold">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function filterCards() {
+                const citySelecter = document.getElementById('citySelect');
+                const selectedCity = citySelecter.value;
+                const cards = document.getElementsByClassName('m-2');
+                const inputElements = document.querySelector('#BySearch');
+                const InputValue = inputElements.value;
+
+                for (let i = 0; i < cards.length; i++) {
+                    let titles = cards[i].querySelector(".card-title");
+                    const card = cards[i];
+                    const city = card.getAttribute('data-city');         
+                
+                    if ((selectedCity === city || selectedCity === 'all') && titles.innerText.toLowerCase().indexOf(InputValue.toLowerCase()) > -1) {
+                        card.style.display = 'flex';
+                        card.closest('.col-sm-12').classList.remove('d-none');
+                    } else {
+                        card.style.display = 'none';
+                        card.closest('.col-sm-12').classList.add('d-none');
+                    }
+                }
+            };
+        </script>
+
+{% endblock %}    
+   
