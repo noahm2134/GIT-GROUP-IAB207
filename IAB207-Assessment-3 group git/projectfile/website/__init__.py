@@ -44,11 +44,26 @@ def create_app():
     from . import event
     app.register_blueprint(event.bp)
     
+ 
     return app
 
+@app.errorhandler(500)
+def internal_error(e):
+    return render_template('./errors/error500.html')
 @app.errorhandler(404) 
-# inbuilt function which takes error as parameter 
 def not_found(e): 
-  return render_template("404.html")
+  return render_template("./errors/error404.html")
+@app.errorhandler(400) 
+def not_found(e): 
+  return render_template("./errors/error400.html")
+app.errorhandler(497) 
+def not_found(e): 
+  return render_template("./errors/error497.html")
+app.errorhandler(503) 
+def not_found(e): 
+  return render_template("./errors/error503.html")
+
+
+
 
 
