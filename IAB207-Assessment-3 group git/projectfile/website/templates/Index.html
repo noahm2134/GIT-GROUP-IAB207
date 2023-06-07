@@ -8,13 +8,13 @@
               <a a href="#AllEvents" class="nav-link active" data-bs-toggle="tab">All events</a>
             </li>
             <li class="nav-item" >
-              <a href="#DrumAndBass" class="nav-link " data-bs-toggle="tab">Drum and Bass</a>
+              <a href="#Play" class="nav-link " data-bs-toggle="tab">Drum and Bass</a>
             </li>
             <li class="nav-item" >
-              <a href="#House" class="nav-link " data-bs-toggle="tab">House</a>
+              <a href="#Learn" class="nav-link " data-bs-toggle="tab">House</a>
             </li>
             <li class="nav-item">
-              <a href="#Indie" class="nav-link " data-bs-toggle="tab">Indie</a>
+              <a href="#Watch" class="nav-link " data-bs-toggle="tab">Indie</a>
             </li>
             <li class="nav-item ">
               <a href="#Other" class="nav-link " data-bs-toggle="tab">Other</a>
@@ -39,9 +39,9 @@
           {% endfor %}
           </div>
 
-          <div class="tab-pane fade" id="DrumAndBass">
+          <div class="tab-pane fade" id="Play">
             {% for event in events %}
-            {% if event.catagory == 'Drum And Bass' %}
+            {% if event.catagory == 'Play' %}
           <div class="card h-100">
             <img src="{{event.image}}" class="card-img-top" alt="..." width="50", height="400">
             <div class="card-body">
