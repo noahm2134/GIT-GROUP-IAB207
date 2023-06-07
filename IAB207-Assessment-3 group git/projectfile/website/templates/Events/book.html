@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% import "bootstrap/form.html" as wtf %}
+{% block content %}
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-12">
+
+        <h1>Book Tickets</h1>
+        <p>Enter Booking Details</p>
+
+        {{wtf.render_form(book)}}
+        
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% import "bootstrap/form.html" as wtf %}
+{% block content %}
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-12">
+
+        <h1>Add New Event</h1>
+        <p>Enter a new upcoming event.</p>
+
+        {{wtf.render_form(form)}}
+        
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

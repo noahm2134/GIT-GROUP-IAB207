@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% import "bootstrap/form.html" as wtf %}
+{% block content %}
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-12">
+
+        <h1>Update</h1>
+        <p>Update your event with name {{event.name}}</p>
+
+        {{wtf.render_form(update)}}
+        
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}
