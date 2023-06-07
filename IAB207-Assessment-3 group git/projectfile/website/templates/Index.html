@@ -43,14 +43,14 @@
             {% for event in events %}
             {% if event.catagory == 'Play' %}
           <div class="card h-100">
-            <img src="{{event.image}}" class="card-img-top" alt="..." width="50", height="400">
+            <img src="{{events.image}}" class="card-img-top" alt="..." width="50", height="400">
             <div class="card-body">
               <h5 class="card-title">{{event.name}}</h5>
               <p class="card-text">{{event.description}}</p>
-              <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+              <a class="btn btn-primary" href="{{url_for('events.show', id=event.id)}}" role="button">Details</a>
             </div>
             <div class="card-footer">
-              <small class="text-muted">{{event.status}}</small>
+              <small class="text-muted">{{events.status}}</small>
             </div>
           </div>
           {% endif %}
@@ -58,15 +58,15 @@
           
           </div>
           
-          <div class="tab-pane fade" id="">>
+          <div class="tab-pane fade" id="Learn">>
             {% for event in events %}
-            {% if event.catagory == 'House' %}
+            {% if events.catagory == 'Learn' %}
           <div class="card h-100">
-            <img src="{{event.image}}" class="card-img-top" alt="..." width="50", height="400">
+            <img src="{{events.image}}" class="card-img-top" alt="..." width="50", height="400">
             <div class="card-body">
-              <h5 class="card-title">{{event.name}}</h5>
-              <p class="card-text">{{event.description}}</p>
-              <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+              <h5 class="card-title">{{events.name}}</h5>
+              <p class="card-text">{{events.description}}</p>
+              <a class="btn btn-primary" href="{{url_for('events.show', id=events.id)}}" role="button">Details</a>
             </div>
             <div class="card-footer">
               <small class="text-muted">{{event.status}}</small>
@@ -76,18 +76,18 @@
           {% endfor %}
           </div>
 
-          <div class="tab-pane fade" id="Indie">>
+          <div class="tab-pane fade" id="Watch">>
             {% for event in events %}
-            {% if event.catagory == 'Indie' %}
+            {% if event.catagory == 'Watch' %}
           <div class="card h-100">
-            <img src="{{event.image}}" class="card-img-top" alt="..." width="50", height="400">
+            <img src="{{events.image}}" class="card-img-top" alt="..." width="50", height="400">
             <div class="card-body">
               <h5 class="card-title">{{event.name}}</h5>
               <p class="card-text">{{event.description}}</p>
-              <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+              <a class="btn btn-primary" href="{{url_for('events.show', id=events.id)}}" role="button">Details</a>
             </div>
             <div class="card-footer">
-              <small class="text-muted">{{event.status}}</small>
+              <small class="text-muted">{{events.status}}</small>
             </div>
           </div>
           {% endif %}
@@ -98,11 +98,11 @@
             {% for event in events %}
             {% if event.catagory == 'Other' %}
           <div class="card h-100">
-            <img src="{{event.image}}" class="card-img-top" alt="..." width="50", height="400">
+            <img src="{{events.image}}" class="card-img-top" alt="..." width="50", height="400">
             <div class="card-body">
               <h5 class="card-title">{{event.name}}</h5>
               <p class="card-text">{{event.description}}</p>
-              <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+              <a class="btn btn-primary" href="{{url_for('events.show', id=events.id)}}" role="button">Details</a>
             </div>
             <div class="card-footer">
               <small class="text-muted">{{event.status}}</small>
