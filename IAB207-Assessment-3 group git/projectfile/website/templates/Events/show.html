@@ -9,7 +9,7 @@
   
     
       <h1 class="display-5 fw-bold">Event details and booking</h1>
-      <p class="col-md-8 fs-4">On this page you can view details for an event as well as book for the event</p>
+      <p class="col-md-8 fs-4">On this page you can view details for an event as well as booking tickets for the event</p>
       
     
   </head>
@@ -19,29 +19,29 @@
         <h1>{{event.name}} </h1>
                   <div class="row gx-10">
                     <div class="col-md-6  px-4" >
-                        <img src="{{events.image}}" height="300px", width="300px">
+                        <img src="{{event.image}}" height="300px", width="300px">
                     </div>
                     
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-body">
                               
-                              <h5 class="card-title">Category: {{events.catagory}}</h5><br>
+                              <h5 class="card-title">Genre of Music: {{event.catagory}}</h5><br>
                               <h5 class="card-title">Venue: The Warehouse, Brisbane</h5><br>
                               <h5 class="card-title">Date and Time: 14th October 2022, 9:00pm</h5><br>
-                              <h5 class="card-title">Number of tickets available: {{events.tickets}}</h5><br>
-                              <h5 class="card-title">Created By: {{events.created}}</h5><br>
+                              <h5 class="card-title">Number of tickets available: {{event.tickets}}</h5><br>
+                              <h5 class="card-title">Created By: {{event.created}}</h5><br>
                               
                               
                               {% if current_user.is_authenticated %}
-                            <a href="{{url_for('events.makebooking', id=events.id)}}">
+                            <a href="{{url_for('event.makebooking', id=event.id)}}">
                               <button type="button" class="btn btn-primary" data-bs-target="#staticBackdrop">
                                 Book Tickets
                              </button>
                             </a>
                              {% endif %}
                               {% if current_user.username == event.created %}
-                              <a  href="{{url_for('events.update', id=events.id )}}"> updating</a>
+                              <a  href="{{url_for('event.update', id=event.id )}}"> updating</a>
                                 Update event
                              </button>
                               {% endif %}
@@ -66,7 +66,7 @@
                       
                           <div class="row border-bottom"> 
                             {{wtf.render_form(form,"/events/{0}/comment".format(event.id))}} 
-                            {% for comment in events.comments %}
+                            {% for comment in event.comments %}
                             <div class="col-md-12">  
                               <strong>{{comment.user.name}} <span class="ml-2 text-muted">January 2017</span></strong>
                               <p>{{comment.text}}</p>  
