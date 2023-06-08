@@ -40,7 +40,7 @@ class UpdateForm(FlaskForm):
     status = SelectField('Status', choices=[('Open'), ('Sold-out'), ('Cancelled')], validators=[InputRequired()])
     tickets = StringField("Number of tickets available", validators=[InputRequired()])
     catagory = SelectField("Catagory", choices=[('Play'), ('Learn'), ('Watch'), ('Other')], validators=[InputRequired()])
-    image = FileField('Music Image', validators=[
+    image = FileField('Image', validators=[
     FileRequired(message='Image cannot be empty'),
     FileAllowed(ALLOWED_FILE, message='Only supports png,jpg,JPG,PNG')])
     submit = SubmitField("Update")
