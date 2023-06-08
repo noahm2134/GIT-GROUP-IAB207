@@ -11,14 +11,14 @@ ALLOWED_FILE = {'PNG','JPG','png','jpg'}
 #create a new event 
 class EventForm(FlaskForm):
     name = StringField("Event name", validators=[InputRequired()])
-    created= StringField("Created By", validators=[InputRequired()] )
+    created= StringField("Created By (username)", validators=[InputRequired()] )
     description = TextAreaField('Description', validators=[InputRequired()])
     date = DateField("Date", validators=[InputRequired()])
     location = StringField("Location", validators=[InputRequired()])
     status = SelectField('Status', choices=[('Open'), ('Sold-out'), ('Cancelled')], validators=[InputRequired()])
     catagory = SelectField("Catagory", choices=[('Play'), ('Learn'), ('Watch'), ('Other')], validators=[InputRequired()])
     tickets = StringField("Number of tickets available", validators=[InputRequired()])
-    image = FileField('Music Image', validators=[
+    image = FileField('Image', validators=[
     FileRequired(message='Image cannot be empty'),
     FileAllowed(ALLOWED_FILE, message='Only supports png,jpg,JPG,PNG')])
     submit = SubmitField("Create")
@@ -32,11 +32,11 @@ class BookingForm(FlaskForm):
 
 class UpdateForm(FlaskForm):
     name = StringField("Event name", validators=[InputRequired()])
-    created= StringField("Created By", validators=[InputRequired()] )
+    created= StringField("Created By (username)", validators=[InputRequired()] )
     description = TextAreaField('Description', 
             validators=[InputRequired()])
     date = DateField("Date", validators=[InputRequired()])
-    location = SelectField("Location", choices=[('Brisbane'), ('Melbourne'), ('Hobartt'), ('Sydney'), ('Canberra'), ('Gold Coast'), ('Adelaide'), ('Darwin')], validators=[InputRequired()])
+    location = StringField("Location", validators=[InputRequired()])
     status = SelectField('Status', choices=[('Open'), ('Sold-out'), ('Cancelled')], validators=[InputRequired()])
     tickets = StringField("Number of tickets available", validators=[InputRequired()])
     catagory = SelectField("Catagory", choices=[('Play'), ('Learn'), ('Watch'), ('Other')], validators=[InputRequired()])
