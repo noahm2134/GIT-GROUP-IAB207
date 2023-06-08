@@ -14,7 +14,7 @@ class EventForm(FlaskForm):
     created= StringField("Created By", validators=[InputRequired()] )
     description = TextAreaField('Description', validators=[InputRequired()])
     date = DateField("Date", validators=[InputRequired()])
-    location = SelectField("Location", choices=[('Brisbane'), ('Melbourne'), ('Hobartt'), ('Sydney'), ('Canberra'), ('Gold Coast'), ('Adelaide'), ('Darwin')], validators=[InputRequired()])
+    location = StringField("Location", validators=[InputRequired()])
     status = SelectField('Status', choices=[('Open'), ('Sold-out'), ('Cancelled')], validators=[InputRequired()])
     catagory = SelectField("Catagory", choices=[('Play'), ('Learn'), ('Watch'), ('Other')], validators=[InputRequired()])
     tickets = StringField("Number of tickets available", validators=[InputRequired()])
