@@ -41,8 +41,7 @@
                             </a>
                              {% endif %}
                               {% if current_user.username == event.created %}
-                              <a  href="{{url_for('event.update', id=event.id )}}"> updating</a>
-                                Update event
+                              <a  href="{{url_for('event.update', id=event.id )}}"> Update Event</a>
                              </button>
                               {% endif %}
                             </div>

@@ -44,7 +44,6 @@ def update(id):
   event = db.session.query(Events).filter_by(id=id).first()
   if update.validate_on_submit():
     #call the function that checks and returns image
-    print('Successfully updated event', id, event.name)
     db_file_path=check_upload_file_update(update)
     event=Events(name=update.name.data,created=update.created.data,description=update.description.data, 
     date=update.date.data, location = update.location.data, status=update.status.data, catagory=update.catagory.data, tickets=update.tickets.data, image=db_file_path)
