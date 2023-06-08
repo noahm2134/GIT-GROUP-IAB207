@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Upcoming Music Events</h1>
+<h1>Upcoming Events</h1>
 
         <ul class="nav nav-tabs">
             <li class="nav-item" >
               <a a href="#AllEvents" class="nav-link active" data-bs-toggle="tab">All events</a>
             </li>
             <li class="nav-item" >
-              <a href="#Play" class="nav-link " data-bs-toggle="tab">Drum and Bass</a>
+              <a href="#Play" class="nav-link " data-bs-toggle="tab">Play</a>
             </li>
             <li class="nav-item" >
-              <a href="#Learn" class="nav-link " data-bs-toggle="tab">House</a>
+              <a href="#Learn" class="nav-link " data-bs-toggle="tab">Learn</a>
             </li>
             <li class="nav-item">
-              <a href="#Watch" class="nav-link " data-bs-toggle="tab">Indie</a>
+              <a href="#Watch" class="nav-link " data-bs-toggle="tab">Watch</a>
             </li>
             <li class="nav-item ">
               <a href="#Other" class="nav-link " data-bs-toggle="tab">Other</a>
@@ -26,14 +26,14 @@
             <div class="tab-pane fade show active" id="AllEvents">
             {% for event in events %}
           <div class="card h-100">
-            <img src="{{event.image}}" class="card-img-top" alt="..." width="50", height="400">
+            <img src="{{events.image}}" class="card-img-top" alt="..." width="50", height="400">
             <div class="card-body">
-              <h5 class="card-title">{{event.name}}</h5>
-              <p class="card-text">{{event.description}}</p>
-              <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+              <h5 class="card-title">{{events.name}}</h5>
+              <p class="card-text">{{evenst.description}}</p>
+              <a class="btn btn-primary" href="{{url_for('events.show', id=event.id)}}" role="button">Details</a>
             </div>
             <div class="card-footer">
-              <small class="text-muted">{{event.status}}</small>
+              <small class="text-muted">{{events.status}}</small>
             </div>
           </div>
           {% endfor %}
@@ -43,14 +43,14 @@
             {% for event in events %}
             {% if event.catagory == 'Play' %}
           <div class="card h-100">
-            <img src="{{event.image}}" class="card-img-top" alt="..." width="50", height="400">
+            <img src="{{events.image}}" class="card-img-top" alt="..." width="50", height="400">
             <div class="card-body">
               <h5 class="card-title">{{event.name}}</h5>
               <p class="card-text">{{event.description}}</p>
-              <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+              <a class="btn btn-primary" href="{{url_for('events.show', id=event.id)}}" role="button">Details</a>
             </div>
             <div class="card-footer">
-              <small class="text-muted">{{event.status}}</small>
+              <small class="text-muted">{{events.status}}</small>
             </div>
           </div>
           {% endif %}
@@ -58,15 +58,15 @@
           
           </div>
           
-          <div class="tab-pane fade" id="House">>
+          <div class="tab-pane fade" id="Learn">>
             {% for event in events %}
-            {% if event.catagory == 'House' %}
+            {% if events.catagory == 'Learn' %}
           <div class="card h-100">
-            <img src="{{event.image}}" class="card-img-top" alt="..." width="50", height="400">
+            <img src="{{events.image}}" class="card-img-top" alt="..." width="50", height="400">
             <div class="card-body">
-              <h5 class="card-title">{{event.name}}</h5>
-              <p class="card-text">{{event.description}}</p>
-              <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+              <h5 class="card-title">{{events.name}}</h5>
+              <p class="card-text">{{events.description}}</p>
+              <a class="btn btn-primary" href="{{url_for('events.show', id=events.id)}}" role="button">Details</a>
             </div>
             <div class="card-footer">
               <small class="text-muted">{{event.status}}</small>
@@ -76,18 +76,18 @@
           {% endfor %}
           </div>
 
-          <div class="tab-pane fade" id="Indie">>
+          <div class="tab-pane fade" id="Watch">>
             {% for event in events %}
-            {% if event.catagory == 'Indie' %}
+            {% if event.catagory == 'Watch' %}
           <div class="card h-100">
-            <img src="{{event.image}}" class="card-img-top" alt="..." width="50", height="400">
+            <img src="{{events.image}}" class="card-img-top" alt="..." width="50", height="400">
             <div class="card-body">
               <h5 class="card-title">{{event.name}}</h5>
               <p class="card-text">{{event.description}}</p>
-              <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+              <a class="btn btn-primary" href="{{url_for('events.show', id=events.id)}}" role="button">Details</a>
             </div>
             <div class="card-footer">
-              <small class="text-muted">{{event.status}}</small>
+              <small class="text-muted">{{events.status}}</small>
             </div>
           </div>
           {% endif %}
@@ -98,11 +98,11 @@
             {% for event in events %}
             {% if event.catagory == 'Other' %}
           <div class="card h-100">
-            <img src="{{event.image}}" class="card-img-top" alt="..." width="50", height="400">
+            <img src="{{events.image}}" class="card-img-top" alt="..." width="50", height="400">
             <div class="card-body">
               <h5 class="card-title">{{event.name}}</h5>
               <p class="card-text">{{event.description}}</p>
-              <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+              <a class="btn btn-primary" href="{{url_for('events.show', id=events.id)}}" role="button">Details</a>
             </div>
             <div class="card-footer">
               <small class="text-muted">{{event.status}}</small>
