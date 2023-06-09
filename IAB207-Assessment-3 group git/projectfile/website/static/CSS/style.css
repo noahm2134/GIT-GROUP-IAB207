@@ -2,6 +2,11 @@
     background-color: white;
     border-bottom: solid;
  }
+
+ main{
+   margin-left: 15px;
+   margin-right: 15px;
+}
 .headerLogo{
    width: 265px;
 
@@ -17,7 +22,7 @@
  #jumbotron{
     
   
-  color: black;
+  color: yellow;
   padding-left: 20px;
   padding-right: 20px;
   
@@ -27,7 +32,7 @@
  
  #imgJumbotron{
     width: 100%;
-    height:500px;
+    height:200px;
     object-fit:contain;
  }
  

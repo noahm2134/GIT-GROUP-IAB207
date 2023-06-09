@@ -32,7 +32,7 @@ class BookingForm(FlaskForm):
 
 class UpdateForm(FlaskForm):
     name = StringField("Event name", validators=[InputRequired()])
-    created= StringField("Created By (username)", validators=[InputRequired()] )
+    created= StringField("Updated By (username)", validators=[InputRequired()] )
     description = TextAreaField('Description', 
             validators=[InputRequired()])
     date = DateField("Date", validators=[InputRequired()])
@@ -67,7 +67,7 @@ class RegisterForm(FlaskForm):
     submit = SubmitField("Register")
 
 class CommentForm(FlaskForm):
-  text = TextAreaField('Comment', [InputRequired()])
+  text = TextAreaField('Comment', [InputRequired()], render_kw={'style': 'width: 1050px'})
   submit = SubmitField('Make Comment')
 
 
