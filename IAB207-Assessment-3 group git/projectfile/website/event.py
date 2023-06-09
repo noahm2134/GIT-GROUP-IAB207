@@ -23,6 +23,7 @@ def show(id):
 def create():
   print('Method type: ', request.method)
   form = EventForm()
+  
   if form.validate_on_submit():
     #calls the function that checks and returns image
     db_file_path=check_upload_file(form)
@@ -107,14 +108,17 @@ def comment(event):
     return redirect(url_for('event.show', id=event))
 
 #Book Event
-@bp.route('/ <id> /booking', methods = ['GET', 'POST'])
+@bp.route('/<id>/booking', methods = ['GET', 'POST'])
 def makebooking(id):
   book = BookingForm()   
+  
   if book.validate_on_submit():
     booking=Booking(name = book.name.data, qty = book.qty.data)
     # add the object to the db session
+    
     db.session.add(booking)
     # commits to the database
+
     db.session.commit()
     print('Booking Successful', 'success', id)
     return redirect(url_for('event.makebooking', id=book))
