@@ -1,41 +1,46 @@
 .navbar{
-    background-color: white;
-    border-bottom: solid;
- }
-
- main{
-   margin-left: 15px;
-   margin-right: 15px;
+   background-color: white;
+   border-bottom: solid;
 }
 .headerLogo{
-   width: 265px;
+  width: 265px;
 
+}
+main{
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .card {
-  
-   margin-bottom: 10px; /* Added */
+  display: inline-block;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 10px; /* Added */
 }
- head{
-    color: black;
- }
-
- #jumbotron{
-    
-  
-  color: yellow;
-  padding-left: 20px;
-  padding-right: 20px;
-  
+.tab-content{
   text-align: center;
-  font-size: 200%;
- }
+}
+
+head{
+   color: black;
+}
+
+#jumbotron{
+   
  
- #imgJumbotron{
-    width: 100%;
-    height:200px;
-    object-fit:contain;
- }
- 
- #index_card{
-    height:fit-content;
- }
+ color: white;
+ padding-left: 20px;
+ padding-right: 20px;
+
+ text-align: center;
+ font-size: 200%;
+}
+
+#imgJumbotron{
+   width: 100%;
+   height:200px;
+   object-fit:contain;
+}
+
+#index_card{
+   height:fit-content;
+}

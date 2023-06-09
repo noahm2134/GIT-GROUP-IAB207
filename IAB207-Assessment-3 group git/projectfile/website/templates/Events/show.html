@@ -7,15 +7,17 @@
 
 
   
+  
     
-     
+
 
 <body>
+  
     <main>
       <div id="conts" style="margin-left:10px; padding-top: 30px">
         <div id="conts">
           <h1 class="display-5 fw-bold">Event Details and Booking</h1>
-
+        
         </div>
       <hr>
         <h1 class="display-5 fw-bold" style="padding-top: 30px; padding-bottom: 30px;">{{event.name}} </h1>
@@ -33,7 +35,6 @@
                               <h5 class="card-title">Date: {{event.date.strftime("%m/%d/%Y")}}</h5><br>
                               <h5 class="card-title">Number of tickets available: {{event.tickets}}</h5><br>
                               <h5 class="card-title">Created By: {{event.created}}</h5><br>
-                              <h5 class="card-title">{{event.description}}</h5><br>
                               
                               
                               {% if current_user.is_authenticated %}
@@ -45,10 +46,10 @@
                              {% endif %}
                               {% if current_user.username == event.created %}
                               <a  href="{{url_for('event.update', id=event.id )}}" > 
-                                <button type="button" class="btn btn-primary" data-bs-target="#staticBackdrop">
-                               Update Event
-                               </button>
-                                </a>
+                              <button type="button" class="btn btn-primary" data-bs-target="#staticBackdrop">
+                             Update Event
+                             </button>
+                              </a>
                               {% endif %}
                             </div>
                           </div>
@@ -71,6 +72,7 @@
                       
                           <div class="row border-bottom"> 
                             {{wtf.render_form(form,"/events/{0}/comment".format(event.id))}} 
+                       
                             {% for comment in event.comments %}
                             <div class="col-md-12">  
                               <strong>{{comment.user.name}} <span class="ml-2 text-muted">{{comment.created_at.strftime("%m/%d/%Y, %I:%M %p")}}</span></strong>
@@ -82,11 +84,10 @@
                     </div>
                   </div>
                 </div>
+          </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
- 
- 
-        
-      </main>
+  
+   </main>
 </body>
  
 
