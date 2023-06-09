@@ -27,8 +27,8 @@ def create():
   if form.validate_on_submit():
     #calls the function that checks and returns image
     db_file_path=check_upload_file(form)
-    event=Events(name=form.name.data,created=form.created.data,description=form.description.data, 
-    date=form.date.data, location = form.location.data, status=form.status.data, catagory=form.catagory.data, tickets=form.tickets.data, image=db_file_path)
+    event=Events(name=form.name.data,created=current_user.username,description=form.description.data, 
+    date=form.date.data, location = form.location.data, status=form.status.data, catagory=form.catagory.data, tickets=form.tickets.data, ticket_price=form.ticket_price.data, image=db_file_path)
     # add the object to the db session
     db.session.add(event)
     # commits to the database
@@ -46,10 +46,10 @@ def update(id):
   if update.validate_on_submit():
     #call the function that checks and returns image
     db_file_path=check_upload_file_update(update)
-    event=Events(name=update.name.data,created=update.created.data,description=update.description.data, 
-    date=update.date.data, location = update.location.data, status=update.status.data, catagory=update.catagory.data, tickets=update.tickets.data, image=db_file_path)
+    event=Events(name=update.name.data,created=current_user.username,description=update.description.data, 
+    date=update.date.data, location = update.location.data, status=update.status.data, catagory=update.catagory.data, tickets=update.tickets.data,  ticket_price=update.ticket_price.data, image=db_file_path)
     # add the object to the db session
-    #db.session.add(event)
+  
     # commit to the database
     db.session.commit()
     print('Successfully updated event', id, event.name)
@@ -111,7 +111,7 @@ def comment(event):
 @bp.route('/<id>/booking', methods = ['GET', 'POST'])
 def makebooking(id):
   book = BookingForm()  
-
+  event = Events.query.filter_by(id=id).first()
   if book.validate_on_submit():
     booking=Booking(name = book.name.data, qty = book.qty.data)
     # add the object to the db session
@@ -122,4 +122,4 @@ def makebooking(id):
     db.session.commit()
     print('Booking Successful', 'success', id)
     return redirect(url_for('event.makebooking', id=book))
-  return render_template('events/book.html', book=book)
+  return render_template('events/book.html', book=book, event=event)

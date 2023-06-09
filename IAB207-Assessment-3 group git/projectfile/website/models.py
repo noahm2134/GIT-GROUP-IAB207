@@ -13,6 +13,7 @@ class Events(db.Model):
     status = db.Column(db.String(20), nullable=False)
     catagory = db.Column(db.String(20), nullable=False)
     tickets = db.Column(db.Integer, nullable=False)
+    ticket_price = db.Column(db.Integer, nullable=False)
     image = db.Column(db.String(400))
     # relation to call user.comments and comment.created_by
     comments = db.relationship('Comment', backref='events')

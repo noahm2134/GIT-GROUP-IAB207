@@ -2,7 +2,7 @@ from sqlite3 import Date
 
 from xmlrpc.client import DateTime
 from flask_wtf import FlaskForm
-from wtforms.fields import TextAreaField,SubmitField, StringField, PasswordField, DateField, SelectField
+from wtforms.fields import TextAreaField,SubmitField, StringField, PasswordField, DateField, SelectField, IntegerField
 from wtforms.validators import InputRequired, Length, Email, EqualTo
 from flask_wtf.file import FileRequired, FileField, FileAllowed
 
@@ -11,13 +11,13 @@ ALLOWED_FILE = {'PNG','JPG','png','jpg'}
 #create a new event 
 class EventForm(FlaskForm):
     name = StringField("Event name", validators=[InputRequired()])
-    created= StringField("Created By (username)", validators=[InputRequired()] )
     description = TextAreaField('Description', validators=[InputRequired()])
     date = DateField("Date", validators=[InputRequired()])
     location = StringField("Location", validators=[InputRequired()])
     status = SelectField('Status', choices=[('Open'), ('Sold-out'), ('Cancelled')], validators=[InputRequired()])
     catagory = SelectField("Catagory", choices=[('Play'), ('Learn'), ('Watch'), ('Other')], validators=[InputRequired()])
     tickets = StringField("Number of tickets available", validators=[InputRequired()])
+    ticket_price = IntegerField("$cost per unit", validators=[InputRequired()])
     image = FileField('Image', validators=[
     FileRequired(message='Image cannot be empty'),
     FileAllowed(ALLOWED_FILE, message='Only supports png,jpg,JPG,PNG')])
@@ -32,13 +32,13 @@ class BookingForm(FlaskForm):
 
 class UpdateForm(FlaskForm):
     name = StringField("Event name", validators=[InputRequired()])
-    created= StringField("Updated By (username)", validators=[InputRequired()] )
     description = TextAreaField('Description', 
             validators=[InputRequired()])
     date = DateField("Date", validators=[InputRequired()])
     location = StringField("Location", validators=[InputRequired()])
     status = SelectField('Status', choices=[('Open'), ('Sold-out'), ('Cancelled')], validators=[InputRequired()])
     tickets = StringField("Number of tickets available", validators=[InputRequired()])
+    ticket_price = IntegerField("$cost per unit", validators=[InputRequired()])
     catagory = SelectField("Catagory", choices=[('Play'), ('Learn'), ('Watch'), ('Other')], validators=[InputRequired()])
     image = FileField('Image', validators=[
     FileRequired(message='Image cannot be empty'),
@@ -67,7 +67,7 @@ class RegisterForm(FlaskForm):
     submit = SubmitField("Register")
 
 class CommentForm(FlaskForm):
-  text = TextAreaField('Comment', [InputRequired()], render_kw={'style': 'width: 1050px'})
+  text = TextAreaField('Comment', [InputRequired()], render_kw={'style': 'width: 1050px'},)
   submit = SubmitField('Make Comment')
 
 
