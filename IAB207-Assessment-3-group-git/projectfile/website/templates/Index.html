@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+  <br/>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col col-lg-3 col-md-6 col-sm-12">
+        <h4>FUN!</h4>
+        <p>Fun for the whole fam!</P>
+      </div>
+      <div class="col col-lg-3 col-md-6 col-sm-12">
+        <h4>Educational!</h4>
+        <p>Educational experiences for all age groups!</p>
+      </div>
+      <div class="col col-lg-3 col-md-6 col-sm-12">
+        <h4>Friendly!</h4>
+        <p>A huge variety community based programs and activities!</p>
+      </div>
+      <div class="col col-lg-3 col-md-6 col-sm-12">
+        <h4>Opportunity!</h4>
+        <p>Make new friends, get involved with fellow parents and help foster a strong community!</p>
+      </div>
+    </div>
+  </div>
+</hr>
+<h1>Upcoming Events</h1>
+
+<form class="form-inline d-flex flex-nowrap" action="{{url_for('main.search')}}" >
+  <input type="text" name="search" class="form-control flex-grow-1 my-1 mr-sm-2" id="SearchForm" placeholder="Search Events By Name..">
+  <button type="submit" class="flex-shrink-1 btn btn-primary my-1">Submit</button>
+</form>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item" >
+              <a a href="#AllEvents" class="nav-link active" data-bs-toggle="tab">All events</a>
+            </li>
+            <li class="nav-item" >
+              <a href="#Play" class="nav-link " data-bs-toggle="tab">Play</a>
+            </li>
+            <li class="nav-item" >
+              <a href="#Learn" class="nav-link " data-bs-toggle="tab">Learn</a>
+            </li>
+            <li class="nav-item">
+              <a href="#Watch" class="nav-link " data-bs-toggle="tab">Watch</a>
+            </li>
+            <li class="nav-item ">
+              <a href="#Other" class="nav-link " data-bs-toggle="tab">Other</a>
+              </li>
+          </ul>
+        </br>
+          <div class="tab-content">
+
+            <div class="tab-pane fade show active" id="AllEvents" style="overflow-y:auto;">
+              <div class="container">
+                <div class="card-columns">
+          
+            {% for event in events %}
+            <div class="card h-100">
+              <img src="{{event.image}}" class="card-img-top" alt="..." style='width:280px; height:180px;'>
+                  <div class="card-body">
+                    <h5 class="card-title">{{event.name}}</h5>
+                    <p class="card-text">{{event.description}}</p>
+                    <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+                  </div>
+              <div class="card-footer">
+                <small class="text-muted">{{event.status}}</small>
+              </div>
+          </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+
+          <div class="tab-pane fade" id="Play">
+            <div class="container">
+              <div class="card-columns">
+            {% for event in events %}
+            {% if event.catagory == 'Play' %}
+            <div class="card h-100">
+              <img src="{{event.image}}" class="card-img-top" alt="..." style='width:280px; height:180px;'>
+                  <div class="card-body">
+                    <h5 class="card-title">{{event.name}}</h5>
+                    <p class="card-text">{{event.description}}</p>
+                    <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+                  </div>
+              <div class="card-footer">
+                <small class="text-muted">{{event.status}}</small>
+              </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+          </div>
+          
+          <div class="tab-pane fade" id="Learn">
+            <div class="container">
+              <div class="card-columns">
+            {% for event in events %}
+            {% if event.catagory == 'Learn' %}
+            <div class="card h-100">
+              <img src="{{event.image}}" class="card-img-top" alt="..." style='width:280px; height:180px;'>
+                  <div class="card-body">
+                    <h5 class="card-title">{{event.name}}</h5>
+                    <p class="card-text">{{event.description}}</p>
+                    <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+                  </div>
+              <div class="card-footer">
+                <small class="text-muted">{{event.status}}</small>
+              </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="Watch">
+        <div class="container">
+          <div class="card-columns">
+            {% for event in events %}
+            {% if event.catagory == 'Watch' %}
+            <div class="card h-100">
+              <img src="{{event.image}}" class="card-img-top" alt="..." style='width:280px; height:180px;'>
+                  <div class="card-body">
+                    <h5 class="card-title">{{event.name}}</h5>
+                    <p class="card-text">{{event.description}}</p>
+                    <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+                  </div>
+              <div class="card-footer">
+                <small class="text-muted">{{event.status}}</small>
+              </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="Other">
+        <div class="container">
+          <div class="card-columns">
+            {% for event in events %}
+            {% if event.catagory == 'Other' %}
+            <div class="card h-100">
+              <img src="{{event.image}}" class="card-img-top" alt="..." style='width:280px; height:180px;'>
+                  <div class="card-body">
+                    <h5 class="card-title">{{event.name}}</h5>
+                    <p class="card-text">{{event.description}}</p>
+                    <a class="btn btn-primary" href="{{url_for('event.show', id=event.id)}}" role="button">Details</a>
+                  </div>
+              <div class="card-footer">
+                <small class="text-muted">{{event.status}}</small>
+              </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+          
+                
+</main>
+        {% endblock %}
